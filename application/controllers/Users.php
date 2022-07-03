@@ -11,4 +11,12 @@ class Users extends CI_Controller {
 		$this->load->view('users/index.php', $data);
 		$this->load->view('templates/admin/footer.php');
 	}
+		public function profile()
+		{
+			$data['title'] = 'profile';
+			$data['menu'] = 'profile';
+		$this->load->view('templates/admin/header.php',$data);
+		$this->load->view('profile/index.php');
+		$this->load->view('templates/admin/footer.php');
+		}
 }
