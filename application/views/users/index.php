@@ -24,7 +24,8 @@
 											<td><?= $value->username ?></td>
                                             <td><?= $value->email ?></td>
                                             <td><?= $value->role ?></td>
-                                            <td><?= $value->status ?></td>
+                                            <td><?= $value->status == 1 ? 'Aktif' : 'Tidak Aktif' ?></td>
+											
 										</tr>
 									<?php endforeach ?>
 								</tbody>
@@ -32,10 +33,7 @@
 						</div>
 						<!-- /.card-body -->
 					</div>
-                    <button type="submit" class="btn btn-success mb-2" data-toggle="modal" data-target="#">
-						    Edit
-					        </button>
-                            <button type="reset" class="btn btn-danger mb-2" data-toggle="modal" data-target="#">
+                            <button type="button" class="btn btn-danger mb-2" data-toggle="modal" data-target="#">
 						    Hapus
 					        </button>
 					<!-- /.card -->
