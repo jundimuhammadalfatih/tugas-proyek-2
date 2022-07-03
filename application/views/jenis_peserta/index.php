@@ -48,8 +48,8 @@
                                                         <input type="hidden" name="id" value="<?= $value->id ?>">
                                                         <div class="modal-body">
                                                             <div class="form-group">
-                                                                <label for="nama">Nama Kategori Peserta</label>
-                                                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Kategori Peserta" required>
+                                                                <label for="nama">Kategori Peserta</label>
+                                                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Kategori Peserta" required value="<?= $value->nama ?>">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
@@ -87,7 +87,7 @@
             <form method="post" action="<?= base_url('jenisPeserta/insert') ?>">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="nama">Nama Kategori Peserta</label>
+                        <label for="nama">Kategori Peserta</label>
                         <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Kategori Peserta" required>
                     </div>
                 </div>

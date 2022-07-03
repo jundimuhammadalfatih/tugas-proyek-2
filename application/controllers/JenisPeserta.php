@@ -15,7 +15,7 @@ class JenisPeserta extends CI_Controller {
 
 	public function insert()
 	{
-		$this->form_validation->set_rules('nama', 'Nama Kategori Peserta', 'required');
+		$this->form_validation->set_rules('nama', 'Kategori Peserta', 'required');
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->session->set_flashdata('pesan',
@@ -48,7 +48,7 @@ class JenisPeserta extends CI_Controller {
 	public function update()
 	{
 		$id_jenis_peserta = $this->input->post('id');
-		$this->form_validation->set_rules('nama', 'Nama Kategori Peserta', 'required');
+		$this->form_validation->set_rules('nama', 'Kategori Peserta', 'required');
 		if ((!isset($id_jenis_peserta) || empty($id_jenis_peserta)) || $this->form_validation->run() == FALSE)
 		{
 			$this->session->set_flashdata('pesan',
