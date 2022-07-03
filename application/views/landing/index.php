@@ -30,7 +30,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Event</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a href="<?= base_url('auth') ?>" class="nav-link"><i class="fa-solid fa-user-lock" style="width: 35px; height: auto;"></i></a></li>
@@ -59,7 +59,7 @@
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
             <!-- Portfolio Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Event</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -74,7 +74,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/talkshow.png') ?>" alt="..." />
+                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/pelatihan.png') ?>" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
@@ -83,7 +83,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/webinar.png') ?>" alt="..." />
+                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/sport.png') ?>" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 3-->
@@ -92,7 +92,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/jobfair.png') ?>" alt="..." />
+                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/workshop.png') ?>" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 4-->
@@ -101,7 +101,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/seminar.png') ?>" alt="..." />
+                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/jobfair.png') ?>" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 5-->
@@ -110,7 +110,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/safe.png') ?>" alt="..." />
+                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/talkshow.png') ?>" alt="..." />
                     </div>
                 </div>
                 <!-- Portfolio Item 6-->
@@ -119,7 +119,7 @@
                         <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                             <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/submarine.png') ?>" alt="..." />
+                        <img class="img-fluid" src="<?= base_url('assets/assets_landing/img/portfolio/bazar.png') ?>" alt="..." />
                     </div>
                 </div>
             </div>
@@ -139,17 +139,17 @@
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-lg-4 ms-auto">
-                    <p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+                    <p class="lead">EO stands for Event Organizer which in Indonesian means event organizer. Literally, EO is a party or professional service provider that regulates the continuity of an event.</p>
                 </div>
                 <div class="col-lg-4 me-auto">
-                    <p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p>
+                    <p class="lead">We have received hundreds of awards too! Making AR EO a trusted & reliable provider of Event Organizer services for the public in Indonesia.</p>
                 </div>
             </div>
             <!-- About Section Button-->
             <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                <a class="btn btn-xl btn-outline-light" href="<?= base_url('auth') ?>">
                     <i class="fas fa-download me-2"></i>
-                    Free Download!
+                    Register Now!
                 </a>
             </div>
         </div>
@@ -235,28 +235,26 @@
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Location</h4>
                     <p class="lead mb-0">
-                        2215 John Daniel Drive
+                        15 Margonda Raya
                         <br />
-                        Clark, MO 65243
+                        Depok City, 65243
                     </p>
                 </div>
                 <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
                     <h4 class="text-uppercase mb-4">Around the Web</h4>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-dribbble"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/"><i class="fab fa-fw fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/"><i class="fab fa-fw fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://dribbble.com/"><i class="fab fa-fw fa-dribbble"></i></a>
                 </div>
                 <!-- Footer About Text-->
                 <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                    <h4 class="text-uppercase mb-4">About Me</h4>
                     <p class="lead mb-0">
-                        Freelance is a free to use, MIT licensed Bootstrap theme created by
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                        .
+                         AR EO is a reliable & trusted Event Organizer service provider for people in Indonesia.
                     </p>
-                </div>
+                </div>  
             </div>
         </div>
     </footer>
@@ -275,7 +273,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Learn Website Design</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -283,7 +281,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/cabin.png') ?>" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/pelatihan.png') ?>" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -307,7 +305,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Cycling Event</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -315,7 +313,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/cake.png') ?>" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/sport.png') ?>" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -339,7 +337,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Workshop</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -347,7 +345,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/circus.png') ?>" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/workshop.png') ?>" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -371,7 +369,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Jobfair</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -379,7 +377,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/game.png') ?>" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/jobfair.png') ?>" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -403,7 +401,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Business TalkShow</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -411,7 +409,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/safe.png') ?>" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/talkshow.png') ?>" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -435,7 +433,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Bazar</h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
@@ -443,7 +441,7 @@
                                     <div class="divider-custom-line"></div>
                                 </div>
                                 <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/submarine.png') ?>" alt="..." />
+                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/assets_landing/img/portfolio/bazar.png') ?>" alt="..." />
                                 <!-- Portfolio Modal - Text-->
                                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                 <button class="btn btn-primary" data-bs-dismiss="modal">
