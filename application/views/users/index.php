@@ -32,10 +32,10 @@
 						</div>
 						<!-- /.card-body -->
 					</div>
-                    <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#">
+                    <button type="submit" class="btn btn-success mb-2" data-toggle="modal" data-target="#">
 						    Edit
 					        </button>
-                            <button type="button" class="btn btn-danger mb-2" data-toggle="modal" data-target="#">
+                            <button type="reset" class="btn btn-danger mb-2" data-toggle="modal" data-target="#">
 						    Hapus
 					        </button>
 					<!-- /.card -->
