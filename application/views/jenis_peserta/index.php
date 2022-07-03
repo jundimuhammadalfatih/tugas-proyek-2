@@ -30,10 +30,10 @@
 						</div>
 						<!-- /.card-body -->
 					</div>
-                    <button type="submit" class="btn btn-success mb-2" data-toggle="modal" data-target="#">
+                    <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#editPesertaModal">
 						    Edit
 					        </button>
-                            <button type="reset" class="btn btn-danger mb-2" data-toggle="modal" data-target="#">
+                            <button type="button" class="btn btn-danger mb-2" data-toggle="modal" data-target="#">
 						    Hapus
 					        </button>
 					<!-- /.card -->
@@ -46,7 +46,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="tambahPesertaModal">Tambah Jenis Peserta</h5>
+                        <h5 class="modal-title" id="tambahPesertaModal">Tambah Kategori Peserta</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -54,8 +54,33 @@
                     <form method="post" action="">
                         <div class="modal-body">
                             <div class="form-group">
-                                <label for="nama">Nama Jenis Peserta</label>
-                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama anda" required>
+                                <label for="nama">Nama Kategori Peserta</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Kategori Peserta" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary" name="tambahPasien">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+		<!-- editPesertaModal -->
+		<div class="modal fade" id="editPesertaModal" tabindex="-1" aria-labelledby="editPesertaModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editPesertaModal">Edit Kategori Peserta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form method="post" action="">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="nama">Nama Kategori Peserta</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Kategori Peserta" required>
                             </div>
                         </div>
                         <div class="modal-footer">
