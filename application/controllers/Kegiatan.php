@@ -6,6 +6,7 @@ class Kegiatan extends CI_Controller {
 	{
         $data['title'] = 'Kegiatan';
         $data['menu'] = 'kegiatan';
+		$data['kegiatan'] = $this->db->get('kegiatan')->result();
 		$this->load->view('templates/admin/header.php', $data);
 		$this->load->view('kegiatan/index.php', $data);
 		$this->load->view('templates/admin/footer.php');
