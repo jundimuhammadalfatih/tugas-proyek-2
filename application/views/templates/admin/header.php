@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= $title ?></title>
 
+  <link rel="icon" type="image/x-icon" href="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" />
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -31,7 +33,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="<?= base_url('assets') ?>/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -121,10 +123,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('assets') ?>/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url('assets') ?>/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('Users/profile') ?>">Alexander Pierce</a>
+          <a href="<?= base_url('Users/profile') ?>" class="d-block"><?= $this->session->userdata('username') ?></a>
         </div>
       </div>
 
@@ -145,7 +147,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= base_url('Dasboard') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
+            <a href="<?= base_url('Dashboard') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dasboard</p>
             </a>
@@ -172,6 +174,12 @@
             <a href="<?= base_url('Kegiatan') ?>" class="nav-link <?= $menu == 'kegiatan' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-calendar-check"></i>
               <p>Kegiatan</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url('Auth/logout') ?>" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>Logout</p>
             </a>
           </li>
         </ul>

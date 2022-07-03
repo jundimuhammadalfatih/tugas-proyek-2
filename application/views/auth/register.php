@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,12 +20,6 @@
             background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
         }
 
-        @media (min-width: 768px) {
-            .gradient-form {
-                height: 150vh !important;
-            }
-        }
-
         @media (min-width: 769px) {
             .gradient-custom-2 {
                 border-top-right-radius: .3rem;
@@ -35,47 +28,50 @@
         }
     </style>
 </head>
-
 <body>
     <section class="gradient-form" style="background-color: #eee;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container py-0 py-sm-4">
+            <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-xl-10">
                     <div class="card rounded-3 text-black">
                         <div class="row g-0">
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
-
                                     <div class="text-center">
                                         <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" style="width: 185px;" alt="logo">
-                                        <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                                        <h4 class="mt-1 mb-sm-5 mb-2">We are The Lotus Team</h4>
                                     </div>
-
-                                    <form>
-                                        <p>Please login to your account</p>
-
-                                        <div class="form-outline mb-4">
-                                            <input type="email" id="form2Example11" class="form-control" placeholder="Username or Email Address" />
-                                            <label class="form-label" for="form2Example11">Username</label>
+                                    <form method="POST" action="<?= base_url('auth/registrasi') ?>">
+                                        <p>Please Register Your Account</p>
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="username">Username</label>
+                                            <input type="text" id="username" class="form-control" name="username" placeholder="Username" value="<?= set_value('username'); ?>"/>
+                                            <span class="text-danger small"><?= form_error('username') ?></span>
                                         </div>
 
-                                        <div class="form-outline mb-4">
-                                            <input type="password" id="form2Example22" class="form-control" placeholder="Password" />
-                                            <label class="form-label" for="form2Example22">Password</label>
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="email">Email</label>
+                                            <input type="email" id="email" class="form-control" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>"/>
+                                            <span class="text-danger small"><?= form_error('email') ?></span>
                                         </div>
 
-                                        <div class="text-center pt-1 mb-5 pb-1">
-                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                                                in</button>
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="password">Password</label>
+                                            <input type="password" id="password" class="form-control" name="password" placeholder="Password" />
+                                            <span class="text-danger small"><?= form_error('password') ?></span>
                                         </div>
 
-                                        <div class="d-flex align-items-center justify-content-center pb-4">
-                                            <p class="mb-0 me-2">Don't have an account?</p>
-                                            <a href="<?= base_url('auth/halaman_regist') ?>" class="btn btn-outline-danger">Create new</a>
+                                        <div class="form-outline mb-3">
+                                            <label class="form-label" for="cpassword">Confirm Password</label>
+                                            <input type="password" id="cpassword" class="form-control" name="cpassword" placeholder="Confirm Password" />
+                                            <span class="text-danger small"><?= form_error('cpassword') ?></span>
                                         </div>
 
+                                        <div class="d-flex flex-column align-items-center justify-content-center pb-4">
+                                            <button type="submit" class="btn btn-outline-danger">Register</button>
+                                            <a href="<?= base_url('auth') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;">Already Have an Account? Sign In Here!!</a>
+                                        </div>
                                     </form>
-
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
@@ -96,5 +92,4 @@
     <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
 </html>

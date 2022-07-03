@@ -13,6 +13,7 @@
 								<th>No</th>
 								<th>Username</th>
 								<th>Email</th>
+								<th>Terakhir Login</th>
 								<th>Role</th>
 								<th>Status</th>
 								<th>Aksi</th>
@@ -24,6 +25,7 @@
 									<td><?= ++$key ?></td>
 									<td><?= $value->username ?></td>
 									<td><?= $value->email ?></td>
+									<td><?= $value->last_login ?></td>
 									<td><?= $value->role ?></td>
 									<td><?= $value->status == 1 ? 'Aktif' : 'Tidak Aktif' ?></td>
 									<td>
