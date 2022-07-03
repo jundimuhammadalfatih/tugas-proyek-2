@@ -16,7 +16,7 @@
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Id</th>
+                                <th>No</th>
                                 <th>Jenis Kegiatan</th>
                                 <th>Aksi</th>
                             </tr>

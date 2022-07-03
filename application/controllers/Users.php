@@ -20,4 +20,26 @@ class Users extends CI_Controller {
 		$this->load->view('users/index.php', $data);
 		$this->load->view('templates/admin/footer.php');
 	}
+
+	public function delete($id)
+	{
+		if (!isset($id) || empty($id))
+		{
+			redirect('users');
+		}
+		else
+		{
+			$this->db->delete('users', ['id' => $id]);
+
+			$this->session->set_flashdata('pesan',
+				'<div class="alert alert-success alert-dismissible fade show" role="alert">
+					User berhasil Dihapus
+					<button class="close" type="button" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>'
+			);
+			redirect('users');
+		}
+	}
 }

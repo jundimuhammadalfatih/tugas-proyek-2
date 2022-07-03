@@ -1,118 +1,202 @@
 <div class="container-fluid">
-			<div class="row">
-				<div class="col-12">
-					<!-- Button trigger modal -->
-					<div class="card">
-						<div class="card-header">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahKegiatanModal">
-						Tambah Kegiatan
-					    </button>
-						</div>
-						<!-- /.card-header -->
-						<div class="card-body">
-							<table id="example2" class="table table-bordered table-hover">
-								<thead>
-									<tr>
-										<th>Id</th>
-										<th>Judul</th>
-										<th>Kapasitas</th>
-										<th>Harga Tiket</th>
-										<th>Tanggal</th>
-										<th>Narasumber</th>
-										<th>Tempat</th>
-										<th>PIC</th>
-										<th>Foto Flyer</th>
-										<th>Jenis Id</th>
-                                        <th>Aksi</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach ($kegiatan as $key => $value) : ?>
-										<tr>
-											<td><?= ++$key ?></td>
-											<td><?= $value->judul?></td>
-                                            <td><?= $value->kapasitas?></td>
-                                            <td><?= $value->harga_tiket?></td>
-                                            <td><?= $value->tanggal?></td>
-                                            <td><?= $value->narasumber?></td>
-                                            <td><?= $value->tempat?></td>
-                                            <td><?= $value->pic?></td>
-                                            <td><?= $value->foto_flyer?></td>
-                                            <td><?= $value->jenis_id?></td>
-                                            <td>
-                                                <a href="<?= base_url('users/delete/'.$value->id) ?>" class="btn btn-sm btn-warning" onclick="return confirm ('Edit data ini?')"\>
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-                                                <a href="<?= base_url('users/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm ('Hapus data ini?')"\>
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
-                                            </td>
-										</tr>
-									<?php endforeach ?>
-								</tbody>
-							</table>
-						</div>
-						<!-- /.card-body -->
-					</div>
-					<!-- /.card -->
-				</div>
-				<!-- /.col -->
-			</div>
-		</div><!-- /.container-fluid -->
-        <!-- tambahKegiatanModal -->
-        <div class="modal fade" id="tambahKegiatanModal" tabindex="-1" aria-labelledby="tambahKegiatanModal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="tambahKegiatanModal">Tambah Kegiatan</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <form method="post" action="">
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="nama">Judul</label>
-                                <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Kapasitas</label>
-                                <input type="number" class="form-control" id="kapasitas" name="kapasitas" placeholder="Masukkan kapasitas" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Harga Tiket</label>
-                                <input type="number" class="form-control" id="harga_tiket" name="harga_tiket" placeholder="Masukkan harga tiket" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Tanggal</label>
-                                <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan tanggal" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Narasumber</label>
-                                <input type="text" class="form-control" id="narasumber" name="narasumber" placeholder="Masukkan narasumber" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Tempat</label>
-                                <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Masukkan tempat" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">PIC</label>
-                                <input type="text" class="form-control" id="pic" name="pic" placeholder="Masukkan PIC" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Foto Flyer</label>
-                                <input type="file" class="form-control" id="foto_flyer" name="foto_flyer" placeholder="Masukkan foto flyer" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="nama">Jenis Id</label>
-                                <input type="number" class="form-control" id="jenis_id" name="jenis_id" placeholder="Masukkan jenis id" required>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary" name="tambahKegiatan">Submit</button>
-                        </div>
-                    </form>
+    <div class="row">
+        <div class="col-12">
+            <?= $this->session->userdata('pesan') ?>
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary mb-2" data-toggle="modal" data-target="#tambahKegiatanModal">
+                Tambah Kegiatan
+            </button>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Data Kegiatan</h3>
                 </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Judul</th>
+                                    <th>Kapasitas</th>
+                                    <th>Harga Tiket</th>
+                                    <th>Tanggal</th>
+                                    <th>Narasumber</th>
+                                    <th>Tempat</th>
+                                    <th>PIC</th>
+                                    <th>Foto Flyer</th>
+                                    <th>Jenis Kegiatan</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($kegiatan as $key => $value) : ?>
+                                    <tr>
+                                        <td><?= ++$key ?></td>
+                                        <td><?= $value->judul ?></td>
+                                        <td><?= $value->kapasitas ?></td>
+                                        <td>Rp.&nbsp;<?= number_format($value->harga_tiket, 2, ',', '.') ?></td>
+                                        <td><?= $value->tanggal?></td>
+                                        <td>
+                                            <?php $narasumber = explode(', ', $value->narasumber) ?>
+                                            <table>
+                                                <?php foreach ($narasumber as $n): ?>
+                                                    <tr>
+                                                        <td class="border-0 p-0">- <?= $n ?></td>
+                                                    </tr>
+                                                <?php endforeach ?>
+                                            </table>
+                                        </td>
+                                        <td><?= $value->tempat ?></td>
+                                        <td><?= $value->pic ?></td>
+                                        <td><?= $value->foto_flyer ?></td>
+                                        <td><?= $value->nama ?></td>
+                                        <td>
+                                            <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editKegiatanModal<?= $value->id ?>">
+                                                <i class="fas fa-edit"></i>
+                                            </button>
+                                            <a href="<?= base_url('kegiatan/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+
+                                            <!-- editKegiatanModal -->
+                                            <div class="modal fade" id="editKegiatanModal<?= $value->id ?>" tabindex="-1" aria-labelledby="editKegiatanModal<?= $value->id ?>" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="editKegiatanModal<?= $value->id ?>">Edit Kegiatan</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <form method="post" action="<?= base_url('kegiatan/update') ?>" enctype="multipart/form-data">
+                                                            <input type="hidden" name="id" value="<?= $value->id ?>">
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label for="judul">Judul</label>
+                                                                    <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul" required value="<?= $value->judul ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="kapasitas">Kapasitas</label>
+                                                                    <input type="number" class="form-control" id="kapasitas" name="kapasitas" placeholder="Masukkan kapasitas" required value="<?= $value->kapasitas ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="harga_tiket">Harga Tiket</label>
+                                                                    <input type="number" class="form-control" id="harga_tiket" name="harga_tiket" placeholder="Masukkan harga tiket" required value="<?= $value->harga_tiket ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="tanggal">Tanggal</label>
+                                                                    <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan tanggal" required value="<?= $value->tanggal ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="narasumber">Narasumber</label>
+                                                                    <input type="text" class="form-control" id="narasumber" name="narasumber" placeholder="Masukkan narasumber" required value="<?= $value->narasumber ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="tempat">Tempat</label>
+                                                                    <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Masukkan tempat" required value="<?= $value->tempat ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="pic">PIC</label>
+                                                                    <input type="text" class="form-control" id="pic" name="pic" placeholder="Masukkan PIC" required value="<?= $value->pic ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="foto_flyer">Foto Flyer</label>
+                                                                    <input type="file" class="form-control" id="foto_flyer" name="foto_flyer" placeholder="Masukkan foto flyer" required value="<?= $value->foto_flyer ?>">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="jenis_kegitan">Jenis Kegiatan</label>
+                                                                    <select class="form-control" name="jenis_kegiatan" id="jenis_kegiatan" required>
+                                                                        <option value="" selected disabled>-- Pilih Jenis Kegiatan --</option>
+                                                                        <?php foreach ($jenis_kegiatan as $j): ?>
+                                                                            <option value="<?= $j->id ?>" <?= $value->jenis_id == $j->id ? 'selected' : '' ?>><?= $j->nama ?></option>
+                                                                        <?php endforeach ?>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.card-body -->
             </div>
+            <!-- /.card -->
         </div>
+        <!-- /.col -->
+    </div>
+</div><!-- /.container-fluid -->
+
+<!-- tambahKegiatanModal -->
+<div class="modal fade" id="tambahKegiatanModal" tabindex="-1" aria-labelledby="tambahKegiatanModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tambahKegiatanModal">Tambah Kegiatan</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="<?= base_url('kegiatan/insert') ?>" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="judul">Judul</label>
+                        <input type="text" class="form-control" id="judul" name="judul" placeholder="Masukkan judul" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kapasitas">Kapasitas</label>
+                        <input type="number" class="form-control" id="kapasitas" name="kapasitas" placeholder="Masukkan kapasitas" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="harga_tiket">Harga Tiket</label>
+                        <input type="number" class="form-control" id="harga_tiket" name="harga_tiket" placeholder="Masukkan harga tiket" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal</label>
+                        <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan tanggal" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="narasumber">Narasumber</label>
+                        <input type="text" class="form-control" id="narasumber" name="narasumber" placeholder="Masukkan narasumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tempat">Tempat</label>
+                        <input type="text" class="form-control" id="tempat" name="tempat" placeholder="Masukkan tempat" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pic">PIC</label>
+                        <input type="text" class="form-control" id="pic" name="pic" placeholder="Masukkan PIC" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto_flyer">Foto Flyer</label>
+                        <input type="file" class="form-control" id="foto_flyer" name="foto_flyer" placeholder="Masukkan foto flyer" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jenis_kegitan">Jenis Kegiatan</label>
+                        <select class="form-control" name="jenis_kegiatan" id="jenis_kegiatan" required>
+                            <option value="" selected disabled>-- Pilih Jenis Kegiatan --</option>
+                            <?php foreach ($jenis_kegiatan as $j): ?>
+                                <option value="<?= $j->id ?>"><?= $j->nama ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" name="tambahKegiatan">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
