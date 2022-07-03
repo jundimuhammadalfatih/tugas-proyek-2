@@ -114,7 +114,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="<?= base_url('assets') ?>/dist/img/Logo_pemweb_putih.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">AR.EO</span>
     </a>
 
@@ -126,7 +126,7 @@
           <img src="<?= base_url('assets') ?>/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?= $this->session->userdata('username') ?></a>
+          <a href="<?= base_url('Users/profile') ?>" class="d-block"><?= $this->session->userdata('username') ?></a>
         </div>
       </div>
 
