@@ -48,7 +48,7 @@
 
                                     <div class="text-center">
                                         <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" style="width: 185px;" alt="logo">
-                                        <h4 class="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                                        <h4 class="mt-1 mb-5 pb-1">We are The AR. EO Team</h4>
                                     </div>
 
                                     <form>
@@ -86,9 +86,8 @@
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                     <h4 class="mb-4">We are more than just a company</h4>
-                                    <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <p class="small mb-0">EO stands for Event Organizer which in Indonesian means event organizer. Literally, EO is a party or professional service provider that regulates the continuity of an event. 
+                                    We have received hundreds of awards too! Making AR EO a trusted & reliable provider of Event Organizer services for the public in Indonesia.</p>
                                 </div>
                             </div>
                         </div>
