@@ -7,10 +7,10 @@ class Landing extends CI_Controller {
         // $data['title'] = 'Dashboard';
         // $data['menu'] = 'dashboard';
         $data = [
-            'title' => 'Dashboard',
+            'title' => 'AR.EO',
             'menu' => 'dashboard'
         ];
 
-		$this->load->view('landing/index');
+		$this->load->view('landing/index', $data);
 	}
 }
