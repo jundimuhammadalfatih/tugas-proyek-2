@@ -6,7 +6,7 @@ class Dashboard extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if (!$this->session->has_userdata('email')) {
+		if (!$this->session->has_userdata('email') && $this->session->userdata('role') != 'administrator') {
 			redirect('auth');
 		}
 	}

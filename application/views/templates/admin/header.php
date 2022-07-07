@@ -177,6 +177,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="<?= base_url('kegiatan/kegiatanTerdaftar') ?>" class="nav-link <?= $menu == 'kegiatan_terdaftar' ? 'active' : '' ?>">
+              <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>Daftar Pendaftar Kegiatan</p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="<?= base_url('Auth/logout') ?>" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Logout</p>

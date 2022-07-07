@@ -42,6 +42,7 @@ class Auth extends CI_Controller {
 					$this->db->update('users', ['last_login' => date('Y-m-d H:i:s')], ['id' => $checkUser[0]->id]);
 
 					$this->session->set_userdata([
+						'user_id' => $checkUser[0]->id,
 						'username' => $checkUser[0]->username,
 						'email' => $checkUser[0]->email,
 						'role' => $checkUser[0]->role
@@ -49,7 +50,7 @@ class Auth extends CI_Controller {
 					if ($checkUser[0]->role == 'administrator') {
 						redirect();
 					} else {
-						redirect('user');
+						redirect('peserta');
 					}
 				} else{
 					$this->session->set_flashdata('pesan', 

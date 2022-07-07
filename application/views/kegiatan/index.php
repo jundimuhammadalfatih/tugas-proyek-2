@@ -50,7 +50,11 @@
                                         </td>
                                         <td><?= $value->tempat ?></td>
                                         <td><?= $value->pic ?></td>
-                                        <td><?= $value->foto_flyer ?></td>
+                                        <td>
+                                            <a href="<?= base_url('assets/img_kegiatan/'.$value->foto_flyer) ?>" target="_blank">
+                                                <img src="<?= base_url('assets/img_kegiatan/'.$value->foto_flyer) ?>" alt="Foto Flyer" class="img-thumbnail" style="width: 150px;">
+                                            </a>
+                                        </td>
                                         <td><?= $value->nama ?></td>
                                         <td>
                                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editKegiatanModal<?= $value->id ?>">

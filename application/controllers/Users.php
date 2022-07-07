@@ -6,7 +6,7 @@ class Users extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if (!$this->session->has_userdata('email')) {
+		if (!$this->session->has_userdata('email') && $this->session->userdata('role') != 'administrator') {
 			redirect('auth');
 		}
 	}
@@ -15,7 +15,7 @@ class Users extends CI_Controller {
 	{
     $data['title'] = 'Users';
     $data['menu'] = 'users';
-		$data['users'] = $this->db->get('users')->result();
+		$data['users'] = $this->db->order_by('id', 'DESC')->get('users')->result();
 		$this->load->view('templates/admin/header.php', $data);
 		$this->load->view('users/index.php', $data);
 		$this->load->view('templates/admin/footer.php');
@@ -23,9 +23,9 @@ class Users extends CI_Controller {
 
 	public function profile()
 	{
-	  $data['title'] = 'profile';
-	  $data['menu'] = 'profile';
-	  $this->load->view('templates/admin/header.php',$data);
+		$data['title'] = 'profile';
+		$data['menu'] = 'profile';
+		$this->load->view('templates/admin/header.php',$data);
 		$this->load->view('profile/index.php');
 		$this->load->view('templates/admin/footer.php');
 	}

@@ -6,7 +6,7 @@ class Kegiatan extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if (!$this->session->has_userdata('email')) {
+		if (!$this->session->has_userdata('email') && $this->session->userdata('role') != 'administrator') {
 			redirect('auth');
 		}
 	}
@@ -16,9 +16,24 @@ class Kegiatan extends CI_Controller {
         $data['title'] = 'Kegiatan';
         $data['menu'] = 'kegiatan';
 		$data['jenis_kegiatan'] = $this->db->get('jenis_kegiatan')->result();
-		$data['kegiatan'] = $this->db->select('kegiatan.*, jenis_kegiatan.nama')->from('kegiatan')->join('jenis_kegiatan', 'jenis_kegiatan.id = kegiatan.jenis_id')->get()->result();
+		$data['kegiatan'] = $this->db->select('kegiatan.*, jenis_kegiatan.nama')->from('kegiatan')->join('jenis_kegiatan', 'jenis_kegiatan.id = kegiatan.jenis_id')->order_by('kegiatan.id', 'DESC')->get()->result();
 		$this->load->view('templates/admin/header.php', $data);
 		$this->load->view('kegiatan/index.php', $data);
+		$this->load->view('templates/admin/footer.php');
+	}
+
+	public function kegiatanTerdaftar()
+	{
+		$data['title'] = 'Kegiatan Terdaftar';
+        $data['menu'] = 'kegiatan_terdaftar';
+		$data['kegiatan'] = $this->db->select('daftar.*, users.username, users.email, kegiatan.judul, kategori_peserta.nama')->from('daftar')
+							->join('users', 'users.id = daftar.users_id')
+							->join('kegiatan', 'kegiatan.id = daftar.kegiatan_id')
+							->join('kategori_peserta', 'kategori_peserta.id = daftar.kategori_peserta_id')
+							->order_by('daftar.id', 'DESC')
+							->get()->result();
+		$this->load->view('templates/admin/header.php', $data);
+		$this->load->view('kegiatan/kelola_kegiatan.php', $data);
 		$this->load->view('templates/admin/footer.php');
 	}
 

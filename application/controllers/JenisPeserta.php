@@ -6,7 +6,7 @@ class JenisPeserta extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		if (!$this->session->has_userdata('email')) {
+		if (!$this->session->has_userdata('email') && $this->session->userdata('role') != 'administrator') {
 			redirect('auth');
 		}
 	}
@@ -15,7 +15,7 @@ class JenisPeserta extends CI_Controller {
 	{
         $data['title'] = 'Jenis Peserta';
         $data['menu'] = 'jenis_peserta';
-		$data['jenis_peserta'] = $this->db->get('kategori_peserta')->result();
+		$data['jenis_peserta'] = $this->db->order_by('id', 'DESC')->get('kategori_peserta')->result();
 		$this->load->view('templates/admin/header.php', $data);
 		$this->load->view('jenis_peserta/index.php', $data);
 		$this->load->view('templates/admin/footer.php');
@@ -38,7 +38,7 @@ class JenisPeserta extends CI_Controller {
 		}
 		else
 		{
-			$jenis_peserta = $this->input->post('nama');
+			$jenis_peserta = $this->input->post('nama', true);
 			$this->db->insert('kategori_peserta', ['nama' => $jenis_peserta]);
 
 			$this->session->set_flashdata('pesan',
@@ -55,7 +55,7 @@ class JenisPeserta extends CI_Controller {
 
 	public function update()
 	{
-		$id_jenis_peserta = $this->input->post('id');
+		$id_jenis_peserta = $this->input->post('id', true);
 		$this->form_validation->set_rules('nama', 'Kategori Peserta', 'required');
 		if ((!isset($id_jenis_peserta) || empty($id_jenis_peserta)) || $this->form_validation->run() == FALSE)
 		{
@@ -71,7 +71,7 @@ class JenisPeserta extends CI_Controller {
 		}
 		else
 		{
-			$jenis_peserta = $this->input->post('nama');
+			$jenis_peserta = $this->input->post('nama', true);
 			$this->db->update('kategori_peserta', ['nama' => $jenis_peserta], ['id' => $id_jenis_peserta]);
 
 			$this->session->set_flashdata('pesan',
