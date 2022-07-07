@@ -8,9 +8,9 @@ class Auth extends CI_Controller {
 	{
 		if ($this->session->has_userdata('email')) {
 			if ($this->session->userdata('role') == 'administrator') {
-				redirect();
+				redirect('dashboard');
 			} else {
-				redirect('user');
+				redirect('peserta');
 			}
 			return false;
 		}
@@ -48,7 +48,7 @@ class Auth extends CI_Controller {
 						'role' => $checkUser[0]->role
 					]);
 					if ($checkUser[0]->role == 'administrator') {
-						redirect();
+						redirect('dashboard');
 					} else {
 						redirect('peserta');
 					}
@@ -68,9 +68,9 @@ class Auth extends CI_Controller {
 	{
 		if ($this->session->has_userdata('email')) {
 			if ($this->session->userdata('role') == 'administrator') {
-				redirect();
+				redirect('dashboard');
 			} else {
-				redirect('user');
+				redirect('peserta');
 			}
 			return false;
 		}

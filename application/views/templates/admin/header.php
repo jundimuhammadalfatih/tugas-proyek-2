@@ -179,7 +179,7 @@
           <li class="nav-item">
             <a href="<?= base_url('kegiatan/kegiatanTerdaftar') ?>" class="nav-link <?= $menu == 'kegiatan_terdaftar' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-calendar-alt"></i>
-              <p>Daftar Pendaftar Kegiatan</p>
+              <p>Peserta Terdaftar</p>
             </a>
           </li>
           <li class="nav-item">

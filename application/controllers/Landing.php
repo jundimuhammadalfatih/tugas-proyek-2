@@ -8,9 +8,9 @@ class Landing extends CI_Controller {
         parent::__construct();
         if ($this->session->has_userdata('email')) {
 			if ($this->session->userdata('role') == 'administrator') {
-				redirect();
+				redirect('dashboard');
 			} else {
-				redirect('user');
+				redirect('peserta');
 			}
 			return false;
 		}
@@ -18,13 +18,9 @@ class Landing extends CI_Controller {
 
 	public function index()
 	{
-        // $data['title'] = 'Dashboard';
-        // $data['menu'] = 'dashboard';
-        $data = [
-            'title' => 'AR.EO',
-            'menu' => 'dashboard'
-        ];
+        $data['title'] = 'AR.EO';
 
+		$data['kegiatan'] = $this->db->select('kegiatan.*, jenis_kegiatan.nama')->from('kegiatan')->join('jenis_kegiatan', 'jenis_kegiatan.id = kegiatan.jenis_id')->order_by('kegiatan.id', 'DESC')->get()->result();
 		$this->load->view('landing/index', $data);
 	}
 }
