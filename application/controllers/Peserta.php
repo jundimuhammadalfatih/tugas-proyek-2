@@ -16,7 +16,7 @@ class Peserta extends CI_Controller {
         $data['title'] = 'Peserta';
         $data['menu'] = 'peserta';
 		$data['jenis_peserta'] = $this->db->get('kategori_peserta')->result();
-		$data['kegiatan_terdaftar'] = $this->db->select('id')->from('daftar')->where('users_id', $this->session->userdata('user_id'))->get()->result_array();
+		$data['kegiatan_terdaftar'] = $this->db->select('kegiatan_id')->where('users_id', $this->session->userdata('user_id'))->from('daftar')->get()->result_array();
 		$data['kegiatan'] = $this->db->select('kegiatan.*, jenis_kegiatan.nama')->from('kegiatan')->join('jenis_kegiatan', 'jenis_kegiatan.id = kegiatan.jenis_id')->get()->result();
 		$this->load->view('templates/user/header.php', $data);
 		$this->load->view('peserta/index.php', $data);
@@ -82,7 +82,7 @@ class Peserta extends CI_Controller {
 	{
         $data['title'] = 'Kegiatan Terdaftar';
         $data['menu'] = 'kegiatan_terdaftar';
-		$data['kegiatan'] = $this->db->select('daftar.*, kegiatan.judul, kategori_peserta.nama')->from('daftar')
+		$data['kegiatan'] = $this->db->select('daftar.*, kegiatan.judul, kategori_peserta.nama')->where('users_id', $this->session->userdata('user_id'))->from('daftar')
 							->join('kegiatan', 'kegiatan.id = daftar.kegiatan_id')
 							->join('kategori_peserta', 'kategori_peserta.id = daftar.kategori_peserta_id')
 							->get()->result();

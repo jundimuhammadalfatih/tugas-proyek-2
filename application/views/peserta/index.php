@@ -27,7 +27,7 @@
                             <i class="fas fa-map-marker-alt"></i> &nbsp; <?= $k->tempat ?>
                         </p>
                     </div>
-                    <?php if (in_array($k->id, array_column($kegiatan_terdaftar, 'id'))): ?>
+                    <?php if (!in_array($k->id, array_column($kegiatan_terdaftar, 'kegiatan_id'))): ?>
                         <form action="#" method="get" class="mb-2 mr-2">
                             <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#daftarKegiatanModal<?= $k->id ?>">Daftar</button>
                         </form>
@@ -38,7 +38,7 @@
                     <?php endif ?>
                 </div>
             </div>
-            <?php if (in_array($k->id, array_column($kegiatan_terdaftar, 'id'))): ?>
+            <?php if (!in_array($k->id, array_column($kegiatan_terdaftar, 'kegiatan_id'))): ?>
                 <!-- daftarKegiatanModal -->
                 <div class="modal fade" id="daftarKegiatanModal<?= $k->id ?>" tabindex="-1" aria-labelledby="daftarKegiatanModal<?= $k->id ?>" aria-hidden="true">
                     <div class="modal-dialog">
