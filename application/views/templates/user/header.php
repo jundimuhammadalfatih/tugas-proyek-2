@@ -126,7 +126,7 @@
           <img src="<?= base_url('assets') ?>/dist/img/avatar4.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('Users/profile') ?>" class="d-block"><?= $this->session->userdata('username') ?></a>
+          <a href="<?= base_url('index.php/Users/profile') ?>" class="d-block"><?= $this->session->userdata('username') ?></a>
         </div>
       </div>
 
@@ -147,19 +147,19 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= base_url('Peserta') ?>" class="nav-link <?= $menu == 'peserta' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/Peserta') ?>" class="nav-link <?= $menu == 'peserta' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dasboard</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Peserta/kegiatanTerdaftar') ?>" class="nav-link <?= $menu == 'kegiatan_terdaftar' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/Peserta/kegiatanTerdaftar') ?>" class="nav-link <?= $menu == 'kegiatan_terdaftar' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-calendar-check"></i>
               <p>Kegiatan Terdaftar</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Auth/logout') ?>" class="nav-link">
+            <a href="<?= base_url('index.php/Auth/logout') ?>" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Logout</p>
             </a>

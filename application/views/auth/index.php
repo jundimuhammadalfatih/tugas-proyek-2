@@ -43,7 +43,7 @@
                                         <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">We are The AR. EO Team</h4>
                                     </div>
-                                    <form method="POST" action="<?= base_url('auth') ?>">
+                                    <form method="POST" action="<?= base_url('index.php/auth') ?>">
                                         <p>Please login to your account</p>
 
                                         <div class="form-outline mb-4">

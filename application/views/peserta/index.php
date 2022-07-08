@@ -49,7 +49,7 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <form method="post" action="<?= base_url('peserta/daftar') ?>">
+                            <form method="post" action="<?= base_url('index.php/peserta/daftar') ?>">
                                 <input type="hidden" name="kegiatan_id" value="<?= $k->id ?>">
                                 <div class="modal-body">
                                     <div class="form-group">

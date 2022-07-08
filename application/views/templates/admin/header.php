@@ -126,7 +126,7 @@
           <img src="<?= base_url('assets') ?>/dist/img/avatar5.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('Users/profile') ?>" class="d-block"><?= $this->session->userdata('username') ?></a>
+          <a href="<?= base_url('index.php/Users/profile') ?>" class="d-block"><?= $this->session->userdata('username') ?></a>
         </div>
       </div>
 
@@ -147,43 +147,43 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="<?= base_url('Dashboard') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/Dashboard') ?>" class="nav-link <?= $menu == 'dashboard' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dasboard</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Users') ?>" class="nav-link <?= $menu == 'users' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/Users') ?>" class="nav-link <?= $menu == 'users' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-users"></i>
               <p>Users</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('JenisPeserta') ?>" class="nav-link <?= $menu == 'jenis_peserta' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/JenisPeserta') ?>" class="nav-link <?= $menu == 'jenis_peserta' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-list-alt"></i>
               <p>Jenis Peserta</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('JenisKegiatan') ?>" class="nav-link <?= $menu == 'jenis_kegiatan' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/JenisKegiatan') ?>" class="nav-link <?= $menu == 'jenis_kegiatan' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-list-alt"></i>
               <p>Jenis Kegiatan</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Kegiatan') ?>" class="nav-link <?= $menu == 'kegiatan' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/Kegiatan') ?>" class="nav-link <?= $menu == 'kegiatan' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-calendar-check"></i>
               <p>Kegiatan</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('kegiatan/kegiatanTerdaftar') ?>" class="nav-link <?= $menu == 'kegiatan_terdaftar' ? 'active' : '' ?>">
+            <a href="<?= base_url('index.php/kegiatan/kegiatanTerdaftar') ?>" class="nav-link <?= $menu == 'kegiatan_terdaftar' ? 'active' : '' ?>">
               <i class="nav-icon fas fa-calendar-alt"></i>
               <p>Peserta Terdaftar</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('Auth/logout') ?>" class="nav-link">
+            <a href="<?= base_url('index.php/Auth/logout') ?>" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>Logout</p>
             </a>

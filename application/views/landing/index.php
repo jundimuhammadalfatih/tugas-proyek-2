@@ -33,7 +33,7 @@
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Event</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a href="<?= base_url('auth') ?>" class="nav-link"><i class="fa-solid fa-user-lock" style="width: 35px; height: auto;"></i></a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a href="<?= base_url('index.php/auth') ?>" class="nav-link"><i class="fa-solid fa-user-lock" style="width: 35px; height: auto;"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -137,7 +137,7 @@
             </div>
             <!-- About Section Button-->
             <div class="text-center mt-4">
-                <a class="btn btn-xl btn-outline-light" href="<?= base_url('auth/registrasi') ?>">
+                <a class="btn btn-xl btn-outline-light" href="<?= base_url('index.php/auth/registrasi') ?>">
                     <i class="fas fa-download me-2"></i>
                     Register Now!
                 </a>

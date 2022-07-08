@@ -29,7 +29,7 @@
 									<td><?= $value->role ?></td>
 									<td><?= $value->status == 1 ? 'Aktif' : 'Tidak Aktif' ?></td>
 									<td>
-										<a href="<?= base_url('users/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
+										<a href="<?= base_url('index.php/users/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
 											<i class="fas fa-trash"></i>
 										</a>
 									</td>

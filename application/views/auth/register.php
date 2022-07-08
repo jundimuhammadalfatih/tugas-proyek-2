@@ -41,7 +41,7 @@
                                         <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">We are The AR. EO Team</h4>
                                     </div>
-                                    <form method="POST" action="<?= base_url('auth/registrasi') ?>">
+                                    <form method="POST" action="<?= base_url('index.php/auth/registrasi') ?>">
                                         <p>Please Register Your Account</p>
                                         <div class="form-outline mb-3">
                                             <label class="form-label" for="username">Username</label>
@@ -69,7 +69,7 @@
 
                                         <div class="d-flex flex-column align-items-center justify-content-center pb-4">
                                             <button type="submit" class="btn btn-outline-danger">Register</button>
-                                            <a href="<?= base_url('auth') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;">Already Have an Account? Sign In Here!!</a>
+                                            <a href="<?= base_url('index.php/auth') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;">Already Have an Account? Sign In Here!!</a>
                                         </div>
                                     </form>
                                 </div>

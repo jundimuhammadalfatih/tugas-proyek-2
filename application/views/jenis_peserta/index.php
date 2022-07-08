@@ -30,7 +30,7 @@
                                         <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editPesertaModal<?= $value->id ?>">
                                             <i class="fas fa-edit"></i>
                                         </button>
-                                        <a href="<?= base_url('jenisPeserta/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <a href="<?= base_url('index.php/jenisPeserta/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
                                             <i class="fas fa-trash"></i>
                                         </a>
 
@@ -44,7 +44,7 @@
                                                             <span aria-hidden="true">&times;</span>
                                                         </button>
                                                     </div>
-                                                    <form method="post" action="<?= base_url('jenisPeserta/update') ?>">
+                                                    <form method="post" action="<?= base_url('index.php/jenisPeserta/update') ?>">
                                                         <input type="hidden" name="id" value="<?= $value->id ?>">
                                                         <div class="modal-body">
                                                             <div class="form-group">
@@ -84,7 +84,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="post" action="<?= base_url('jenisPeserta/insert') ?>">
+            <form method="post" action="<?= base_url('index.php/jenisPeserta/insert') ?>">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="nama">Kategori Peserta</label>
