@@ -52,7 +52,7 @@
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light mb-0">Job Fair - Webinar - TalkShow</p>
+            <p class="masthead-subheading font-weight-light mb-0">Job Fair - Webinar - Talk Show - All Events</p>
         </div>
     </header>
     <!-- Portfolio Section-->
@@ -73,7 +73,7 @@
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal<?= $k->id ?>">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-ellipsis-h fa-3x"></i></div>
                             </div>
                             <img class="img-fluid" src="<?= base_url('assets/img_kegiatan/'.$k->foto_flyer) ?>" alt="foto flyer" />
                         </div>
@@ -97,13 +97,8 @@
                                                     <div class="divider-custom-line"></div>
                                                 </div>
                                                 <!-- Portfolio Modal - Image-->
-                                                <img class="img-fluid rounded mb-5" src="<?= base_url('assets/img_kegiatan/'.$k->foto_flyer) ?>" alt="foto flyer" />
-                                                <!-- Portfolio Modal - Text-->
-                                                <!-- <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p> -->
-                                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                    <i class="fas fa-xmark fa-fw"></i>
-                                                    Close Window
-                                                </button>
+                                                <img class="img-fluid rounded" src="<?= base_url('assets/img_kegiatan/'.$k->foto_flyer) ?>" alt="foto flyer" />
+                                                
                                             </div>
                                         </div>
                                     </div>
