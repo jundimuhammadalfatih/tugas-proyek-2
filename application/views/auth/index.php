@@ -69,7 +69,12 @@
                                 <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                     <h4 class="mb-4">We are more than just a company</h4>
                                     <p class="small mb-0">EO stands for Event Organizer which in Indonesian means event organizer. Literally, EO is a party or professional service provider that regulates the continuity of an event. 
-                                    We have received hundreds of awards too! Making AR EO a trusted & reliable provider of Event Organizer services for the public in Indonesia.</p>
+                                    We have received hundreds of awards too! Making AR EO a trusted & reliable provider of Event Organizer services for the public in Indonesia.
+                                    <hr>
+                                    as admin : admin@gmail.com
+                                    <br>
+                                    as user : user@gmail.com
+                                    </p>
                                 </div>
                             </div>
                         </div>
