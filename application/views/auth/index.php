@@ -38,33 +38,31 @@
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
                                     <?= $this->session->userdata('pesan') ?>
-
+                                    <a href="<?= base_url('') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;"><u>Back</u></a>
                                     <div class="text-center">
                                         <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" style="width: 185px;" alt="logo">
-                                        <h4 class="mt-1 mb-5 pb-1">We are The AR. EO Team</h4>
                                     </div>
+                                    <div class="text-center mt-3"><b><p>Please login to your account</p></b></div>
+                                    <div class="card p-3">
                                     <form method="POST" action="<?= base_url('index.php/auth') ?>">
-                                        <p>Please login to your account</p>
-
-                                        <div class="form-outline mb-4">
+                                        <div class="form-outline mb-3">
                                             <label class="form-label" for="email">Email</label>
                                             <input type="email" id="email" class="form-control" name="email" placeholder="Email Address" />
+                                            <span class="text-danger small"><?= form_error('email') ?></span>
                                         </div>
 
-                                        <div class="form-outline mb-4">
+                                        <div class="form-outline mb-3">
                                             <label class="form-label" for="password">Password</label>
                                             <input type="password" id="password" class="form-control" name="password" placeholder="Password" />
+                                            <span class="text-danger small"><?= form_error('password') ?></span>
                                         </div>
 
-                                        <div class="text-center pt-1 mb-2 pb-1">
-                                            <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log in</button>
-                                        </div>
-
-                                        <div class="d-flex align-items-center justify-content-center pb-4">
-                                            <p class="mb-0 me-2">Don't have an account?</p>
-                                            <a href="<?= base_url('auth/registrasi') ?>" class="btn btn-outline-danger">Create new</a>
+                                        <div class="d-flex flex-column align-items-center justify-content-center">
+                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2" type="submit">Log in</button>    
+                                        <a href="<?= base_url('index.php/auth/registrasi') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;">Don't have an account? Create new!!</a>
                                         </div>
                                     </form>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">

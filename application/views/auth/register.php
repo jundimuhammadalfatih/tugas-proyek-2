@@ -37,12 +37,13 @@
                         <div class="row g-0">
                             <div class="col-lg-6">
                                 <div class="card-body p-md-5 mx-md-4">
+                                <a href="<?= base_url('') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;"><u>Back</u></a>
                                     <div class="text-center">
                                         <img src="<?= base_url('assets/assets_landing/img/LogoPemweb.png') ?>" style="width: 185px;" alt="logo">
-                                        <h4 class="mt-1 mb-5 pb-1">We are The AR. EO Team</h4>
                                     </div>
+                                    <div class="text-center mt-3"><p><b>Please Register Your Account</b></p></div>
+                                    <div class="card p-3 ">
                                     <form method="POST" action="<?= base_url('index.php/auth/registrasi') ?>">
-                                        <p>Please Register Your Account</p>
                                         <div class="form-outline mb-3">
                                             <label class="form-label" for="username">Username</label>
                                             <input type="text" id="username" class="form-control" name="username" placeholder="Username" value="<?= set_value('username'); ?>"/>
@@ -67,11 +68,12 @@
                                             <span class="text-danger small"><?= form_error('cpassword') ?></span>
                                         </div>
 
-                                        <div class="d-flex flex-column align-items-center justify-content-center pb-4">
-                                            <button type="submit" class="btn btn-outline-danger">Register</button>
+                                        <div class="d-flex flex-column align-items-center justify-content-center">
+                                            <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2">Register</button>
                                             <a href="<?= base_url('index.php/auth') ?>" class="mb-0 mt-2" style="font-size: 15px; text-decoration: none;">Already Have an Account? Sign In Here!!</a>
                                         </div>
                                     </form>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">

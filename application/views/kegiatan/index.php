@@ -60,7 +60,7 @@
                                             <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editKegiatanModal<?= $value->id ?>">
                                                 <i class="fas fa-edit"></i>
                                             </button>
-                                            <a href="<?= base_url('index.php/kegiatan/delete/'.$value->id) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                            <a href="<?= base_url('index.php/kegiatan/delete/'.$value->id) ?>" class=" mt-1 btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus data ini?')">
                                                 <i class="fas fa-trash"></i>
                                             </a>
 
